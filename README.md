@@ -54,9 +54,6 @@ npm start
 3. Click the "Review Code" button to analyze the code.
 4. View AI-generated feedback and suggested improvements.
 
-## Screenshots
-(Add relevant screenshots here)
-
 ## Future Improvements
 - Support for multiple programming languages.
 - Advanced AI suggestions with deep learning models.
