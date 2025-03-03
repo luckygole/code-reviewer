@@ -1,3 +1,4 @@
+
 import { useState , useEffect } from 'react'
 import "prismjs/themes/prism-tomorrow.css"
 import Editor from 'react-simple-code-editor'
@@ -6,7 +7,6 @@ import axios from 'axios'
 import Markdown from 'react-markdown'
 import './App.css'
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,7 +22,14 @@ function App() {
 
   async function reviewCode() {
     try {
-      const res = await axios.post(`${backendUrl}/ai/get-review`, { code })
+      // const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+      const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+
+      // const res = await axios.post("https://code-reviewer-ypvt.onrender.com/ai/get-review", { code })
+      const res = await axios.post(`${backendUrl}/ai/get-review`, { code });
+
       setReview(res.data)
       // console.log(res.data)
     } catch (error) {

@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World ji!');
+  res.send('Hello World ji lucky!');
 });
 
 app.use('/ai', aiRoutes);
