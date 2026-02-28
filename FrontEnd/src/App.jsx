@@ -104,7 +104,8 @@ function example() {
     setError(null)
     
     try {
-      const API_URL = import.meta.env.VITE_API_URL;
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      // const API_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
       const response = await axios.post(`${API_URL}/ai/get-review`, { code })
       setReview(response.data)
     } catch (error) {
