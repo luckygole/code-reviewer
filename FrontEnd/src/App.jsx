@@ -115,6 +115,7 @@ function example() {
       setLoading(false)
     }
   }
+  console.log("ENV:", import.meta.env.VITE_API_URL);
 
   return (
     <div className="app-container">
